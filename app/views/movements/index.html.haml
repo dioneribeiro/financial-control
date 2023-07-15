@@ -1,0 +1,20 @@
+.w-full
+  - if notice.present?
+    %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
+  .grid.grid-cols-4.gap-4.mb-4
+    .p-6.rounded-lg.shadow-lg.bg-white
+      %p Saldo Atual:
+      %p.text-3xl.font-bold
+        = number_to_currency @saldo
+    = link_to new_movement_path,                                                                |
+      class: "rounded-lg shadow-lg p-6 bg-blue-600 text-white block font-medium text-center" do |
+      %span Nova Movimentação
+    = link_to destroy_user_session_path,                                                                          |
+      method: :delete,                                                                                            |
+      class: "rounded-lg shadow-lg p-6 text-white block font-medium text-center bg-blue-700 hover:bg-blue-700" do |
+      %span
+        Logado como: #{current_user.email}
+      %br/
+      %span Sair
+  #movements.grid.grid-cols-1.gap-4.min-w-full
+    = render @movements

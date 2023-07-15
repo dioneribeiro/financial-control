@@ -1,0 +1,11 @@
+%div{:class => "p-6 rounded-lg shadow-lg  bg-white flex #{movement.saida? ? 'text-red-700' : 'text-green-700'}", :id => "#{dom_id movement}"}
+  .ml-2.mt-2
+    %span
+      = l movement.date
+  .ml-2.mt-2.flex-grow
+    %span
+      = movement.description
+  .mt-2
+    %span
+      = number_to_currency movement.value
+  = button_to 'Deletar', movement, method: :delete, class: "text-white ml-2 rounded-lg py-3 px-5 bg-gray-100 font-medium bg-red-600"
