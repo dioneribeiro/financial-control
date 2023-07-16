@@ -6,6 +6,9 @@ class MovementsController < ApplicationController
   def index
     @movements = collection.order(date: :desc, created_at: :desc)
     @saldo = collection.saldo_atual
+    @saldo_saida = collection.saldo_saida
+    @saldo_entrada = collection.saldo_entrada
+
   end
 
   # GET /movements/new

@@ -8,11 +8,20 @@ class Movement < ApplicationRecord
   validates :description, length: { maximum: 150 }
   validates :value, presence: true
   validates :category, presence: true
-  validate :valida_se_existe_saldo
+  # validate :valida_se_existe_saldo
 
   def self.saldo_atual
     self.entrada.sum(:value) - self.saida.sum(:value)
   end
+
+  def self.saldo_saida
+    self.saida.sum(:value)
+  end
+
+  def self.saldo_entrada
+    self.entrada.sum(:value)
+  end
+
 
   private
 
