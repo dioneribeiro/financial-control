@@ -10,7 +10,7 @@
     = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
-  %body.bg-slate-400
+  %body.bg-gray-500
     - unless devise_controller?
       = render partial: "layouts/navbar"
     %main.container.mx-auto.mt-28.px-5.flex
