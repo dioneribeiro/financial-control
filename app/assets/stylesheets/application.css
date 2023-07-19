@@ -1,0 +1,131 @@
+.cssbuttons-button-new {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 0.7em 1.4em 0.7em 1.2em;
+  color: white;
+  background: #537dad;
+  background: linear-gradient(0deg, rgb(20, 35, 167) 0%, rgb(102, 141, 247) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #143ba798;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 0px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #1614a798;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #1614a798;
+}
+
+.cssbuttons-button-criar {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0.7em 1.4em 0.7em 1.2em;
+  color: white;
+  background: #537dad;
+  background: linear-gradient(0deg, rgb(20, 35, 167) 0%, rgb(102, 141, 247) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #143ba798;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 0px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #1614a798;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #1614a798;
+}
+
+.cssbuttons-button-delete {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 0.7em 1.4em 0.7em 1.2em;
+  color: white;
+  background: #ad7b53;
+  background: linear-gradient(0deg, rgb(167, 20, 20) 0%, rgb(247, 107, 102) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #a7191498;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 6px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #a71e1498;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #a71e1498;
+}
+
+.cssbuttons-button-voltar {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 350;
+  font-size: 18px;
+  padding: 0.7em 1.4em 0.7em 1.2em;
+  color: white;
+  background: #8598af;
+  background: linear-gradient(0deg, rgb(116, 125, 163) 0%, rgb(181, 200, 253) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #4f65a098;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 0px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #5957ac98;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #4544a198;
+}
+
+.login {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #49c5d8 0%,#62a4ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.login:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
