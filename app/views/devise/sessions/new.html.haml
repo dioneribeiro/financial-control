@@ -1,6 +1,6 @@
 %div.w-full.flex.justify-center
-  .w-full.max-w-sm.p-4.bg-gray-900.border.border-gray-200.rounded-lg.shadow.justify-center
-    %h1.text-3xl.mb-4.text-center.font-medium.text-white Faça seu login
+  .w-full.max-w-sm.p-4.bg-gray-900.rounded-lg.shadow.justify-center
+    %h1.text-3xl.mb-5.text-center.font-medium.text-white Faça seu login
     = form_for(resource,                                                      |
               as: resource_name,                                              |
               url: session_path(resource_name),                               |
@@ -16,19 +16,22 @@
             = content_tag :p,                          |
               msg.humanize,                            |
               id: "flash_#{name}" if msg.is_a?(String) |
-      .mb-4
-        = f.label :email, class: " block mb-2 text-sm font-medium text-white "
-        = f.email_field :email, autofocus: true, autocomplete: "email", class: " bg-gray-500 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full "
+      .mb-5
+        = f.label :email, class: " block mb-2 font-medium text-white font-mono text-xl "
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: " text-gray-600 bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 ",
+        placeholder: "nome@compania.com", class: " text-gray-600 "
 
-      .mb-4
-        = f.label :password, class: " block mb-2 text-sm font-medium text-white "
-        = f.password_field :password, class: " bg-gray-500 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full ", |
-          autocomplete: "current-password" |
+      .mb-5
+        = f.label :password, class: " block mb-2 font-medium text-white font-mono text-xl "
+        = f.password_field :password, class: " text-gray-600 bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 ",
+          autocomplete: "current-password", placeholder: "Senha", class: " text-gray-600 " |
       - if devise_mapping.rememberable?
-        .mb-4
-          = f.check_box :remember_me, class: " mr-2 leading-tight "
-          = f.label :remember_me, class: " ml-2 text-sm font-medium text-gray-500 "
-      .mb-4
-        = f.submit "Log in", class: " button text-white bg-blue-800 hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 "
+        .mb-5
+          = f.check_box :remember_me, class: " w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-teal-500 focus:ring-2 "
+          = f.label :remember_me, class: " text-lg ml-2 text-sm font-medium text-gray-200 "
+
+      .mb-5.flex.justify-center
+        = f.submit "Log in", class: " login "
+
       = render "devise/shared/links"
     = render "devise/shared/form_footer"

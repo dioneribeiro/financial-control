@@ -11,8 +11,8 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-  %body.bg-gray-900
+  %body.overflow-hidden.bg-gray-800
     - unless devise_controller?
       = render partial: "layouts/navbar"
-    %main.container.mx-auto.mt-28.px-5.flex
+    %main.container.mx-auto.mt-28.px-5.max-w-4xl
       = yield

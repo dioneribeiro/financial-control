@@ -1,6 +1,7 @@
 .mx-auto.w-full{:class => "md:w-2/3"}
   %div.justify-content-center
-    %h1.font-medium.text-5xl.text-white.text-center Nova movimentação
+    %h1.font-bold.text-5xl.text-white.text-center.mb-4 Nova movimentação
     = render "form", movement: @movement
+
     %div.mt-4.flex.justify-end
-      = link_to 'Voltar', movements_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+      = link_to 'Voltar', movements_path, class: "cssbuttons-button-voltar"

@@ -1,4 +1,4 @@
-.w-full.p-4.bg-gray-900.border.border-gray-200.rounded-lg.shadow
+.w-full.p-4.bg-gray-900.border.border-gray-900.rounded-lg.shadow
   = form_with(model: movement, class: "contents") do |form|
     - if movement.errors.any?
       #error_explanation.bg-red-50.text-red-500.px-3.py-2.font-medium.rounded-lg.mt-3
@@ -10,15 +10,15 @@
             %li= error.full_message
     .my-5
       = form.label :category, { class: "text-gray-200" }
-      = form.select :category, [['Entrada', 'entrada'], ['Saída', 'saida']], {}, { class: "bg-gray-500 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" }
+      = form.select :category, [['Entrada', 'entrada'], ['Saída', 'saida']], {}, { class: "bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" }
     .my-5
       = form.label :date, { class: "text-gray-200" }
-      = form.date_field :date, class: "bg-gray-500 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", max: Date.current
+      = form.date_field :date, class: "bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", max: Date.current
     .my-5
       = form.label :description, { class: "text-gray-200" }
-      = form.text_field :description, class: "bg-gray-500 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
+      = form.text_field :description, class: "bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
     .my-5
       = form.label :value, { class: "text-gray-200" }
-      = form.number_field :value, class: "bg-gray-500 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
+      = form.number_field :value, class: "bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
     .inline
-      = form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer"
+      = form.submit class: "cssbuttons-button-criar"

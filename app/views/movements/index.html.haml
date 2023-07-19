@@ -1,29 +1,30 @@
-.w-full.p-4.bg-white.border.border-gray-500.rounded-lg.shadow
+.w-full.p-6.bg-gray-900.rounded-lg.shadow
   - if notice.present?
-    %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
+    %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-600.font-medium.rounded-lg.inline-block= notice
 
-  %div.ml-4.mt-8.grid.justify-items-end
-    = link_to new_movement_path,                                                                 |
-      class: "fixed top-100 px-6 py-3.5 text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" do |
-      %span Nova Movimentação
-
-
-  %div.my-4.space-y-3.fixed.top
-    .flex.items-center.p-8.text-base.font-bold.rounded-lg.bg-gray-50
-      .p-6.rounded-lg.shadow-lg.bg-gray-200
+  %div
+    %div.flex.items-center.p-8.text-base.font-bold.rounded-lg.bg-gray-100
+      .p-5.rounded-lg.shadow-lg.bg-gray-200
         %p Saldo Atual:
         %p.text-3xl.font-bold{class: "#{@saldo.negative? ? 'text-red-700' : 'text-blue-700'}"}
           = number_to_currency @saldo
-      .p-6.rounded-lg.shadow-lg.bg-gray-200.ml-4
+      .p-5.rounded-lg.shadow-lg.bg-gray-200.ml-5
         %p Valores entradas:
         %p.text-3xl.font-bold.text-green-700
           = number_to_currency @saldo_entrada
 
-      .p-6.rounded-lg.shadow-lg.bg-gray-200.ml-4
+      .p-5.rounded-lg.shadow-lg.bg-gray-200.ml-5
         %p Valores saidas:
         %p.text-3xl.font-bold.text-red-700
           = number_to_currency @saldo_saida
 
-  #movements.grid.grid-cols-1.gap-4.min-w-full
-    = render @movements
+      .p-2.bg-gray-0.ml-12
+        = link_to new_movement_path,
+          class: "cssbuttons-button-new" do
+          %span +
+
+    %div.mt-5
+      %div
+        #movements.grid.grid-cols-1.gap-4.min-w-full.overflow-y-auto.max-h-96
+          = render @movements
 
