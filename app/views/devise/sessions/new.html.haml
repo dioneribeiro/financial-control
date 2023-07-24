@@ -18,20 +18,20 @@
               id: "flash_#{name}" if msg.is_a?(String) |
       .mb-5
         = f.label :email, class: " block mb-2 font-medium text-white font-mono text-xl "
-        = f.email_field :email, autofocus: true, autocomplete: "email", class: " text-gray-600 bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 ",
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: " text-gray-600 bg-gray-200 block shadow rounded-lg shadow-lg border border-gray-200 outline-none px-3 ",
         placeholder: "nome@compania.com", class: " text-gray-600 "
 
       .mb-5
         = f.label :password, class: " block mb-2 font-medium text-white font-mono text-xl "
-        = f.password_field :password, class: " text-gray-600 bg-gray-200 block shadow rounded-md border border-gray-200 outline-none px-3 ",
+        = f.password_field :password, class: " text-gray-600 bg-gray-200 block shadow rounded-lg shadow-lg border border-gray-200 outline-none px-3 ",
           autocomplete: "current-password", placeholder: "Senha", class: " text-gray-600 " |
       - if devise_mapping.rememberable?
         .mb-5
           = f.check_box :remember_me, class: " w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-teal-500 focus:ring-2 "
           = f.label :remember_me, class: " text-lg ml-2 text-sm font-medium text-gray-200 "
 
-      .mb-5.flex.justify-center
-        = f.submit "Log in", class: " login "
+      .mt-5.flex.justify-center.mb-5
+        = f.submit "Login", class: " login "
 
       = render "devise/shared/links"
     = render "devise/shared/form_footer"

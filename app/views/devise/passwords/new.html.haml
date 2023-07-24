@@ -1,5 +1,5 @@
 .w-full.max-w-xs
-  %h1.font-hairline.mb-6.text-center Forgot your password?
+  %h1.text-2xl.mb-5.text-center.font-medium.text-white Esqueci minha senha?
   = form_for(resource,                                              |
     as: resource_name,                                              |
     url: password_path(resource_name),                              |
@@ -13,7 +13,7 @@
       = f.email_field :email, autofocus: true, autocomplete: "email",                                                                       |
         class: "appearance-none border leading-tight focus:outline-none px-3 py-2 rounded shadow focus:shadow-outline text-gray-700 w-full" |
     .mb-4
-      = f.submit "Send Password Reset Info",                                                                                                |
+      = f.submit "Enviar redefinição de senha",                                                                                                |
         class: "button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" |
     = render "devise/shared/links"
   = render "devise/shared/form_footer"

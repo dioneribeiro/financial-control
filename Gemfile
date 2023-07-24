@@ -83,3 +83,5 @@ gem 'devise-tailwindcssed', github: 'invenio-br/devise-tailwindcssed'
 # haml
 gem "haml-rails", "~> 2.0"
 gem  "html2haml"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development

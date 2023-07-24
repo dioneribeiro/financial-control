@@ -102,6 +102,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dockerfile-rails (1.5.1)
+      rails
     erubi (1.12.0)
     erubis (2.7.0)
     globalid (1.1.0)
@@ -259,6 +261,7 @@ DEPENDENCIES
   debug
   devise (~> 4.9)
   devise-tailwindcssed!
+  dockerfile-rails (>= 1.5)
   haml-rails (~> 2.0)
   html2haml
   importmap-rails

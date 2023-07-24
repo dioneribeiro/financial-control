@@ -2,29 +2,30 @@
   - if notice.present?
     %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-600.font-medium.rounded-lg.inline-block= notice
 
-  %div
-    %div.flex.items-center.p-8.text-base.font-bold.rounded-lg.bg-gray-100
-      .p-5.rounded-lg.shadow-lg.bg-gray-200
-        %p Saldo Atual:
-        %p.text-3xl.font-bold{class: "#{@saldo.negative? ? 'text-red-700' : 'text-blue-700'}"}
-          = number_to_currency @saldo
-      .p-5.rounded-lg.shadow-lg.bg-gray-200.ml-5
-        %p Valores entradas:
-        %p.text-3xl.font-bold.text-green-700
-          = number_to_currency @saldo_entrada
 
-      .p-5.rounded-lg.shadow-lg.bg-gray-200.ml-5
-        %p Valores saidas:
-        %p.text-3xl.font-bold.text-red-700
-          = number_to_currency @saldo_saida
+  %div.flex.items.p-6.text-base.font-bold.rounded-lg.bg-gray-100
+    .p-4.rounded-lg.shadow-lg.bg-gray-200.custom-2.custom-1
+      %p Saldo Atual:
+      %p.text-3xl.font-bold.custom-2.custom-1{class: "#{@saldo.negative? ? 'text-red-700' : 'text-blue-700'}"}
+        = number_to_currency @saldo
+    .p-4.rounded-lg.shadow-lg.bg-gray-200.ml-4.custom-2.custom-1
+      %p Valores entradas:
+      %p.text-3xl.font-bold.text-green-700.custom-2.custom-1
+        = number_to_currency @saldo_entrada
 
-      .p-2.bg-gray-0.ml-12
-        = link_to new_movement_path,
-          class: "cssbuttons-button-new" do
-          %span +
+    .p-4.rounded-lg.shadow-lg.bg-gray-200.ml-4.custom-2.custom-1
+      %p Valores saidas:
+      %p.text-3xl.font-bold.text-red-700.custom-2.custom-1
+        = number_to_currency @saldo_saida
 
-    %div.mt-5
-      %div
-        #movements.grid.grid-cols-1.gap-4.min-w-full.overflow-y-auto.max-h-96
-          = render @movements
 
+
+  %div.mt-5.justify-items-center
+    %div
+      #movements.grid.grid-cols-1.gap-4.min-w-full.overflow-y-auto.max-h-96.text-1xl
+        = render @movements
+
+.w-full.mt-4.grid.justify-items-center
+  = link_to new_movement_path,
+    class: "cssbuttons-button-new" do
+    %span +

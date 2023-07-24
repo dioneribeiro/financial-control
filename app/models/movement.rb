@@ -5,7 +5,7 @@ class Movement < ApplicationRecord
 
   validates :date, comparison: { less_than_or_equal_to: proc { Date.current } }
   validates :description, presence: true
-  validates :description, length: { maximum: 80 }
+  validates :description, length: { maximum: 60 }
   validates :value, presence: true
   validates :category, presence: true
   # validate :valida_se_existe_saldo
