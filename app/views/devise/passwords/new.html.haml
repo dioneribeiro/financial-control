@@ -1,19 +1,24 @@
-.w-full.max-w-xs
-  %h1.text-2xl.mb-5.text-center.font-medium.text-white Esqueci minha senha?
-  = form_for(resource,                                              |
-    as: resource_name,                                              |
-    url: password_path(resource_name),                              |
-    html: {                                                         |
-            method: :post,                                          |
-            class: "bg-white mb-4 px-8 pt-6 pb-8 rounded shadow-md" |
-    }) do |f|                                                       |
-    = devise_error_messages!
-    .mb-4
-      = f.label :email, class: "block font-bold mb-2 text-gray-700 text-sm"
-      = f.email_field :email, autofocus: true, autocomplete: "email",                                                                       |
-        class: "appearance-none border leading-tight focus:outline-none px-3 py-2 rounded shadow focus:shadow-outline text-gray-700 w-full" |
-    .mb-4
-      = f.submit "Enviar redefinição de senha",                                                                                                |
-        class: "button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" |
-    = render "devise/shared/links"
-  = render "devise/shared/form_footer"
+%div.w-full.flex.justify-center
+  .w-full.max-w-sm.p-4.bg-gray-900.rounded-lg.shadow.justify-center
+    %h1.text-3xl.mb-5.text-center.font-medium.text-white Esqueci minha senha?
+    = form_for(resource,                                              |
+      as: resource_name,                                              |
+      url: password_path(resource_name),                              |
+      html: {                                                         |
+              method: :post,                                          |
+              class: "mb-4 px-8 pt-6 pb-8 rounded shadow-md" |
+      }) do |f|                                                       |
+      = devise_error_messages!
+      .mb-5
+        = f.label :email, class: " block mb-2 font-medium text-white font-mono text-xl "
+        = f.email_field :email, autofocus: true, autocomplete: "email",                                                                       |
+          placeholder: "nome@compania.com", class: "appearance-none border leading-tight focus:outline-none px-3 py-2 rounded shadow focus:shadow-outline text-gray-700 w-full" |
+
+      .mt-5.flex.justify-center.mb-5
+        = f.submit "Enviar redefinição de senha", class: " login "
+
+      = render "devise/shared/links"
+    = render "devise/shared/form_footer"
+
+
+
