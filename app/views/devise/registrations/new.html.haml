@@ -1,35 +1,37 @@
-.w-full.max-w-xs
-  %h1.font-hairline.mb-6.text-center Sair
-  = form_for(resource,                                                       |
-             as: resource_name,                                              |
-             url: registration_path(resource_name),                          |
-             html: {                                                         |
-                     class: "bg-white mb-4 px-8 pt-6 pb-8 rounded shadow-md" |
-             }                                                               |
-    ) do |f|                                                                 |
-    = devise_error_messages!
-    .mb-4
-      = f.label :email, class: "block font-bold mb-2 text-gray-700 text-sm"
-      = f.email_field :email,                                                                                                               |
-        autocomplete: "email",                                                                                                              |
-        placeholder: "nome@corporacao.com",                                                                                                    |
-        class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none shadow focus:shadow-outline" |
-    .mb-4
-      = f.label :password, class: "block font-bold mb-2 text-gray-700 text-sm"
-      - if @minimum_password_length
-        %small
-          %em.text-gray-600
-            (#{@minimum_password_length} mínimo de caracteres)
-      = f.password_field :password,                                                                                                              |
-        autocomplete: "nova senha",                                                                                                            |
-        class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" |
-    .mb-4
-      = f.label :password_confirmation, class: "block font-bold mb-2 text-gray-700 text-sm"
-      = f.password_field :password_confirmation,                                                                                            |
-        autocomplete: "nova senha",                                                                                                       |
-        class: "appearance-none border leading-tight focus:outline-none px-3 py-2 rounded shadow focus:shadow-outline text-gray-700 w-full" |
-    .mb-4
-      = f.submit "Sair",                                                                                                                 |
-        class: "button bg-blue-500 hover:bg-blue-700 font-bold text-white focus:outline-none py-2 px-4 rounded focus:shadow-outline w-full" |
-    = render "devise/shared/links"
-  = render "devise/shared/form_footer"
+.w-full.flex.justify-center
+  .w-full.max-w-sm.p-4.bg-gray-900.rounded-lg.shadow.justify-center
+    %h1.text-3xl.mb-5.text-center.font-medium.text-white Registro
+    = form_for(resource,                                                       |
+              as: resource_name,                                              |
+              url: registration_path(resource_name),                          |
+              html: {                                                         |
+                      class: "mb-4 px-8 pt-6 pb-8 rounded shadow-md" |
+              }                                                               |
+      ) do |f|                                                                 |
+      = devise_error_messages!
+      .mb-4
+        = f.label :email, class: "block mb-2 font-medium text-white font-mono text-xl"
+        = f.email_field :email, class: " text-gray-600 bg-gray-200 block shadow rounded-lg shadow-lg border border-gray-200 outline-none px-3 ",                                                                                                             |
+          autocomplete: "email",                                                                                                              |
+          placeholder: "nome@corporacao.com",                                                                                                    |
+          class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none shadow focus:shadow-outline" |
+      .mb-4
+        = f.label :password, class: " block mb-2 font-medium text-white font-mono text-xl "
+        - if @minimum_password_length
+          %small
+            %em.text-gray-400
+              ( mínimo de caracteres: #{@minimum_password_length} )
+        = f.password_field :password,                                                                                                               |
+          autocomplete: "nova senha", placeholder: "Senha",                                                                                                           |
+          class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" |
+      .mb-4
+        = f.label :password_confirmation, class: " block mb-2 font-medium text-white font-mono text-xl "
+        = f.password_field :password_confirmation,                                                                                            |
+          autocomplete: "nova senha", placeholder: "Confirmar senha",                                                                                                      |
+          class: "appearance-none border leading-tight focus:outline-none px-3 py-2 rounded shadow focus:shadow-outline text-gray-700 w-full" |
+
+      .mt-5.flex.justify-center.mb-5
+        = f.submit "Criar", class: " login "
+
+      = render "devise/shared/links"
+    = render "devise/shared/form_footer"
