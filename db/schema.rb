@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_12_223736) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_25_230212) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "movements", force: :cascade do |t|
     t.date "date"
     t.string "description", limit: 150
-    t.integer "value"
+    t.decimal "value"
     t.string "category", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
