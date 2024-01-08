@@ -1,7 +1,7 @@
 .mx-auto.w-full.flex{:class => "md:w-2/3"}
   .mx-auto
     - if notice.present?
-      %p#notice.py-2.px-3.bg-green-500.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
+      %p.notice.py-2.px-3.bg-green-500.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
     = render @movement
     = link_to 'Editar', edit_movement_path(@movement), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
     .inline-block.ml-2

@@ -5,7 +5,10 @@ module.exports = {
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.{erb,haml,html,slim}',
+    './app/components/**/*.{erb, html, slim}',
+    './app/components/**/*.rb',
+    './config/initializers/heroicon.rb',
   ],
   theme: {
     extend: {

@@ -34,10 +34,7 @@ class MovementsController < ApplicationController
     @movement.destroy
 
     redirect_to movements_url, notice: "A movimentação foi removida com sucesso."
-    # respond_to do |format|
-    #   format.html { redirect_to movements_url, notice: "A movimentação foi removida com sucesso." }
-    #   format.json { head :no_content }
-    # end
+
   end
 
   private

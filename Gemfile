@@ -27,6 +27,9 @@ gem "stimulus-rails"
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails"
 
+# Estilização de layout tailwind para usuários
+# gem 'devise-tailwindcssed', github: 'invenio-br/devise-tailwindcssed'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -47,6 +50,10 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+
+# Linting tools
+gem 'rubocop'
+gem 'rubocop-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -75,17 +82,27 @@ group :test do
 end
 
 # Gem para criação de tabela de usuários - https://github.com/heartcombo/devise
-gem "devise", "~> 4.9"
+gem "devise"
 
-# Estilização de layout tailwind para usuários
-gem 'devise-tailwindcssed', github: 'invenio-br/devise-tailwindcssed'
-
-# haml
-gem "haml-rails", "~> 2.0"
+#haml
+gem 'haml-rails', '~> 2.1'
 gem  "html2haml"
-
+gem 'haml', '~> 6.3'
+gem 'haml_lint', '~> 0.52.0'
 gem "dockerfile-rails", ">= 1.5", :group => :development
-
+gem 'haml-i18n-extractor', '~> 0.5.9'
 gem "foreman"
 
 gem "redis", "~> 5.0"
+
+#Conversão monetária
+gem 'money', '~> 6.16'
+gem 'money_helper', '~> 3.0', '>= 3.0.2'
+gem 'money-currencylayer-bank', '~> 0.7.2'
+gem 'money-converter', '~> 1.0', '>= 1.0.1'
+# I18n
+gem 'i18n', '~> 1.14', '>= 1.14.1'
+
+#Deploy fly 
+gem "sentry-ruby"
+gem "sentry-rails"
